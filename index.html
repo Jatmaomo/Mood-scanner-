@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unedited Graphixs | Creative Design Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Custom CSS for special effects */
+        .gradient-text {
+            background: linear-gradient(90deg, #f5d742, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#f5d742, #d4af37);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black text-white z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://imagizer.imageshack.com/img923/4149/vfKYQk.jpg" alt="Unedited Graphixs Logo" class="h-16">
+                    <span class="ml-2 text-2xl font-bold gradient-text">UNEDITED GRAPHIXS</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                    <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                    <a href="#portfolio" class="hover:text-yellow-400 transition">Portfolio</a>
+                    <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                    <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+                </div>
+                
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black w-full py-4 px-6" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-yellow-400 transition">Portfolio</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-r from-black to-gray-900 text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="gradient-text">🌟 Welcome to Unedited Graphixs!</span>
+                </h1>
+                <p class="text-xl mb-8 text-gray-300">
+                    Your one-stop creative hub for design, print, and branding solutions!
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-full font-bold hover:opacity-90 transition">
+                        Get Started
+                    </a>
+                    <a href="#portfolio" class="border-2 border-yellow-500 text-white px-6 py-3 rounded-full font-bold hover:bg-yellow-500 hover:text-black transition">
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://imagizer.imageshack.com/img924/2239/TpI56C.jpg" alt="Design Work" class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our <span class="gradient-text">Specialties</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    We offer a comprehensive range of creative services to bring your vision to life
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Creative Graphic Design</h3>
+                    <p class="text-gray-600">
+                        Unique and eye-catching designs tailored to your brand's personality.
+                    </p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">All Kinds of Photo Frames</h3>
+                    <p class="text-gray-600">
+                        Beautiful frames to preserve your precious memories in style.
+                    </p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">General & Digital Printing</h3>
+                    <p class="text-gray-600">
+                        High-quality printing services for all your personal and business needs.
+                    </p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Special Event Designs</h3>
+                    <p class="text-gray-600">
+                        Custom designs for birthdays, weddings, and valentine quotes.
+                    </p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Customized Products</h3>
+                    <p class="text-gray-600">
+                        Mugs, pillows, bottles & paper bags personalized just for you.
+                    </p>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-yellow-500 mb-4 text-4xl">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Stationery Design</h3>
+                    <p class="text-gray-600">
+                        Jotters, notepads & event programs with professional designs.
+                    </p>
+                </div>
+                
+                <!-- Show more services button -->
+                <div class="md:col-span-2 lg:col-span-3 flex justify-center">
+                    <button id="show-more-btn" class="mt-6 px-6 py-3 bg-gray-100 text-black rounded-full font-bold hover:bg-yellow-500 transition">
+                        Show All Services <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Hidden Services -->
+                <div id="more-services" class="hidden md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                    <!-- Additional services will be shown here -->
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Nylon Branding</h3>
+                        <p class="text-gray-600">
+                            Company & product branding on nylon materials for durability.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Event Programs</h3>
+                        <p class="text-gray-600">
+                            Church, school & burial programs designed with care and professionalism.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Marketing Materials</h3>
+                        <p class="text-gray-600">
+                            Posters, fliers & banners to promote your business effectively.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Photo Editing</h3>
+                        <p class="text-gray-600">
+                            Professional photo editing and photobook creation services.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Video Services</h3>
+                        <p class="text-gray-600">
+                            Video packaging & event captioning for your special moments.
+                        </p>
+                    </div>
+                    
+                    <div class="service-card bg-white p-6 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                        <div class="text-yellow-500 mb-4 text-4xl">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Picture Enlargement</h3>
+                        <p class="text-gray-600">
+                            High-quality enlargements of your favorite photographs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our <span class="gradient-text">Portfolio</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    A showcase of our recent work and creative solutions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://imagizer.imageshack.com/img923/95/jcCnGs.jpg" alt="Portfolio Item 1" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Branding Design</h3>
+                            <p>Creative branding solution for a corporate client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://imagizer.imageshack.com/img924/2239/TpI56C.jpg" alt="Portfolio Item 2" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Photo Frame Design</h3>
+                            <p>Custom photo frame with elegant design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://imagizer.imageshack.com/img922/4076/0zhZo1.jpg" alt="Portfolio Item 3" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Wedding Invitation</h3>
+                            <p>Custom-designed wedding stationery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 px-6 bg-gradient-to-r from-black to-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why Choose <span class="gradient-text">Unedited Graphixs?</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wallet text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Affordable</h3>
+                    <p class="text-gray-300">High-quality services at competitive prices</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Creative</h3>
+                    <p class="text-gray-300">Unique and innovative design solutions</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
+                    <p class="text-gray-300">Timely execution and delivery of projects</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nationwide Reach</h3>
+                    <p class="text-gray-300">We serve clients across the country</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Reach out to us for inquiries or to start your next creative project
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-full font-bold hover:opacity-90 transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 flex flex-col justify-center">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-2xl mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <a href="tel:09168281265" class="text-gray-600 hover:text-yellow-500 transition">09168281265</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-2xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <a href="mailto:damilaresunday102@gmail.com" class="text-gray-600 hover:text-yellow-500 transition">damilaresunday102@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-2xl mr-4">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Delivery Note</h4>
+                                    <p class="text-gray-600">We deliver nationwide – right to your doorstep!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="tel:09168281265" class="floating-button w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+        <a href="https://wa.me/2349168281265" class="floating-button w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="#contact" class="floating-button w-14 h-14 bg-yellow-500 text-black rounded-full flex items-center justify-center shadow-xl hover:opacity-90 transition">
+            <i class="fas fa-envelope text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="https://imagizer.imageshack.com/img923/4149/vfKYQk.jpg" alt="Unedited Graphixs Logo" class="h-12">
+                    <span class="ml-2 text-xl font-bold gradient-text">UNEDITED GRAPHIXS</span>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 mb-2">&copy; 2025 Unedited Graphixs. All rights reserved.</p>
+                    <p class="text-gray-400">Creative Design & Printing Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Show more services button
+        document.getElementById('show-more-btn').addEventListener('click', function() {
+            const moreServices = document.getElementById('more-services');
+            const button = this;
+            
+            if (moreServices.classList.contains('hidden')) {
+                moreServices.classList.remove('hidden');
+                button.innerHTML = 'Show Less <i class="fas fa-chevron-up ml-2"></i>';
+            } else {
+                moreServices.classList.add('hidden');
+                button.innerHTML = 'Show All Services <i class="fas fa-chevron-down ml-2"></i>';
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Animate elements when they come into view
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.service-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animation
+        document.querySelectorAll('.service-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
